@@ -14,7 +14,7 @@ function App() {
   <>
   
   
-    <div style={{backgroundColor:"#FFE1E1",margin:"5px"}}>
+    <div style={{margin:"5px"}}>
     {/* <div style={{backgroundColor:"#FB2576", display: "flex" ,padding:"20px", color:"white"}}>
    <div><Home /></div>
       <div  style={{marginLeft:"500px"}}><About /></div>

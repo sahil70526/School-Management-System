@@ -38,17 +38,17 @@ function Login() {
           }
         </>
       )}
-      <div style={{ backgroundColor: "powderblue", height: "330px", width: "400px", marginLeft: "500px", marginTop: "100px", borderRadius: "10px" }}>
+      <div style={{ alignSelf:"center",backgroundColor: "powderblue", height: "350px", width: "450px", marginLeft: "500px", marginTop: "100px", borderRadius: "10px" ,padding:20 }}>
 
       <Form onSubmit={getFormData}>
-        <Form.Group className="mb-3" controlId="formBasicEmail" onChange={(v) => setName(v.target.value)} >
+        <Form.Group className="mb-3 align-self-center" controlId="formBasicEmail" onChange={(v) => setName(v.target.value)} >
           <Form.Label>Email address</Form.Label>
           <Form.Control type="email" placeholder="Enter email" />
           <Form.Text className="text-muted">
             We'll never share your email with anyone else.
           </Form.Text>
         </Form.Group>
-        <Form.Group className="mb-3" controlId="formBasicPassword" onChange={(f) => setPass(f.target.value)}>
+        <Form.Group className="mb-3 " controlId="formBasicPassword" onChange={(f) => setPass(f.target.value)}>
           <Form.Label>Password</Form.Label>
           <Form.Control type="password" placeholder="Password" />
         </Form.Group>
@@ -63,9 +63,11 @@ function Login() {
         <Form.Group className="mb-3" controlId="formBasicCheckbox" onChange={(r) => setTerms(r.target.checked)}>
           <Form.Check type="checkbox" label="Check me out" />
         </Form.Group>
-        <Button variant="primary" type="submit" onClick={() => setUser(true)}>
+          <div style={{marginLeft:"156px" }}>
+          <Button  variant="secondary" size="lg" type="submit" onClick={() => setUser(true)}>
           Submit
         </Button>
+          </div>
       </Form>
       </div>
     </div>

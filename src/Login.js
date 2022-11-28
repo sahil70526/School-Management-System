@@ -9,6 +9,7 @@ function Login() {
   const [terms, setTerms] = useState(false)
   function getFormData(e) {
     e.preventDefault()
+    console.log("e-mail",{name});
 
   }
   return (
@@ -33,12 +34,15 @@ function Login() {
               </tr>
               </tbody>
           </Table>
+          
           {
             terms ? <h4>You agreed to terms</h4> : <h4>Please agree to terms and conditions</h4>
+
           }
+         
         </>
       )}
-      <div style={{ alignSelf:"center",backgroundColor: "powderblue", height: "350px", width: "450px", marginLeft: "500px", marginTop: "100px", borderRadius: "10px" ,padding:20 }}>
+      <div style={{ alignSelf:"center",backgroundColor: "powderblue", height: "350px", width: "450px", marginLeft: "450px", marginTop: "15px", borderRadius: "10px" ,padding:20 }}>
 
       <Form onSubmit={getFormData}>
         <Form.Group className="mb-3 align-self-center" controlId="formBasicEmail" onChange={(v) => setName(v.target.value)} >
@@ -61,7 +65,7 @@ function Login() {
           <option>Comerce</option>
         </Form.Select>
         <Form.Group className="mb-3" controlId="formBasicCheckbox" onChange={(r) => setTerms(r.target.checked)}>
-          <Form.Check type="checkbox" label="Check me out" />
+          <Form.Check type="checkbox" label="Please agree to terms and conditions." />
         </Form.Group>
           <div style={{marginLeft:"156px" }}>
           <Button  variant="secondary" size="lg" type="submit" onClick={() => setUser(true)}>

@@ -11,29 +11,30 @@ function App() {
     setLog(true)
   }
   return (
-  // <>
-  // {
-  //   log==true?<Main/>:<h1 style={{marginLeft:"500px"}}>Please login first</h1>
-  // }
-  //  <Login/>
-  //  <div style={{margin:"3%",marginLeft:"550px"}} >
-  //    <Button  variant="secondary" size="lg" onClick={update}> Render to main page.</Button>
-  //   </div>
+  <>
+  {
+    log==true? 
+    <div>
+    <BrowserRouter>
+    <Routes>
+      <Route path='/' element={<Main />}/>
+    </Routes>
+    </BrowserRouter>
+  </div>:<h1 style={{marginLeft:"500px"}}>Please login first</h1>
+  }
+   <BrowserRouter>
+    <Routes>
+      <Route path='/' element={  <Login/>}/>
+    </Routes>
+    </BrowserRouter>
+   <div style={{margin:"3%",marginLeft:"550px"}} >
+     <Button  variant="secondary" size="lg" onClick={update}> Render to main page.</Button>
+    </div>
   
   
-  // </>
+  </>
   
-   
-  <div>
-  <BrowserRouter>
-  <Routes>
-    <Route path='/' element={<Main />}/>
-    {/* <Route path='/about' element={<About />}/>
-    <Route path='/' element={<Department />}/>
-    <Route path='/' element={<Contact />}/> */}
-  </Routes>
-  </BrowserRouter>
-</div>
+  
 
     
   

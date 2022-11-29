@@ -10,10 +10,10 @@ function Main() {
   return (
     <div style={{ margin: "5px" }}>
       <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly', backgroundColor: 'pink', color: 'white' }}>
-        <Link><Home /></Link>
-        <Link><About /></Link>
-        <Link><Department /></Link>
-        <Link><Contact /></Link>
+        <Link style={{color:'white',fontSize:'medium'}}><Home /></Link>
+        <Link style={{color:'white',fontSize:'medium'}}><About /></Link>
+        <Link style={{color:'white',fontSize:'medium'}}><Department /></Link>
+        <Link style={{color:'white',fontSize:'medium'}}><Contact /></Link>
       </div>
       <div>
         <img src={College} alt="College Image" style={{ height: "550px", width: "100%", margin: "0%", padding: "0%" }} />

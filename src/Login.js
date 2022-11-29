@@ -7,11 +7,18 @@ function Login() {
   const [pass, setPass] = useState(null)
   const [interest, setInterest] = useState("")
   const [terms, setTerms] = useState(false)
+  let result=[];
+  let obj={};
   function getFormData(e) {
     e.preventDefault()
-    console.log("e-mail",{name});
-
+    obj.name=name;
+    obj.password=pass;
+    obj.interest=interest;
+    obj.terms=terms;
+    result.push(obj);
+    console.log(result);
   }
+ 
   return (
     <div >
 
@@ -78,4 +85,4 @@ function Login() {
   )
 }
 
-export default Login
+export default Login;

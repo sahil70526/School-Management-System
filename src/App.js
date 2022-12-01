@@ -8,7 +8,13 @@ import Main from './Main'
 function App() {
   const [log,setLog]=useState(false)
   function update(){
-    setLog(true)
+    let item=JSON.parse(localStorage.getItem('loginData'));
+    if(item[0].name==null|| !item[0].name || item[0].name==''){
+      setLog(false)
+    }else{
+      setLog(true)
+    }
+    localStorage.clear();
   }
   return (
   <>

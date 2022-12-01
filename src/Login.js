@@ -1,13 +1,12 @@
 import React, { useState } from 'react'
 import { Form, Button, Table } from 'react-bootstrap'
-
+let result=[];
 function Login() {
   const [name, setName] = useState(null);
   const [user, setUser] = useState(false);
   const [pass, setPass] = useState(null)
   const [interest, setInterest] = useState("")
   const [terms, setTerms] = useState(false)
-  let result=[];
   let obj={};
   function getFormData(e) {
     e.preventDefault()
@@ -16,7 +15,7 @@ function Login() {
     obj.interest=interest;
     obj.terms=terms;
     result.push(obj);
-    console.log(result);
+    localStorage.setItem('loginData', JSON.stringify(result))
   }
  
   return (
